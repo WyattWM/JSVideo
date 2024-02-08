@@ -1,0 +1,517 @@
+//** CODECADEMY INTRO TO JAVASCRIPT VIDEO START **/
+// DECLARE VARIABLES //
+
+/* Data Types:
+undefined: something that hasnt been defined
+null: means nothing
+boolean: true or false
+string: any sort of text
+symbol: an immutable primative value that is unique
+number: a number
+object: can store key value pairs
+*/
+
+var newVariable = "using var to set new variable";
+
+newVariable = "updating variable"; // with var you can update a variable at any point during your program
+
+console.log(newVariable);
+
+
+// STORING VALUES WITH THE ASSIGNMENT OPERATOR //
+
+
+
+// INITIALIZING VARIABLES WTH THE ASSIGNMENT OPERATOR //
+
+
+
+// UNINTIALIZED VARIABLES // 
+
+
+
+// CASE SENSITIVITY IN VARIABLES // 
+
+
+
+// BASIC MATH //
+
+
+
+// INCREMENT AND DECREMENT //
+
+
+
+// DECIMAL NUMBERS //
+
+
+
+// MULTIPLY TWO DECIMALS //
+
+
+
+// DIVIDE DECIMALS //
+
+
+
+// FINDING A REMAINDER //
+
+
+
+// AUGMENTED MATH OPERATIONS //
+
+
+
+// DECLARE STRING VARIABLES //
+
+
+
+// ESCAPING LITERAL QUOTES //
+
+
+
+// QUOTING STRINGS WITH SINGLE QUOTES //
+
+
+
+//ESCAPE SEQUENCES //
+
+
+
+// PLUS OPERATOR //
+
+
+
+// PLUS EQUALS OPERATOR //
+
+
+
+// CONSTRUCTING STRINGS WITH VARIABLES //
+
+
+
+// APPENDING VARIABLES TO STRINGS //
+
+
+
+// LENGTH OF A STRING //
+
+
+
+// BRACKET NOTATION //
+
+
+
+// UNDERSTAND STRING IMMUTABILITY //
+
+
+
+// FIND THE NTH CHARACTER //
+
+
+
+// WORD BLANKS //
+
+
+
+// ARRAYS //
+
+
+
+// NEST ARRAYS //
+
+
+
+// ACCESS ARRAY DATA //
+
+
+
+// MODIFY ARRAY DATA //
+
+
+
+// ACCESS MULTI-DIMENSIONAL ARRAYS //
+
+
+
+// PUSH() //
+
+
+
+// POP() //
+
+
+
+// SHIFT() //
+
+
+
+// UNSHIFT() //
+
+
+
+// SHOPPING LIST //
+
+
+
+// WRITE REUSABLE WITH FUNCTIONS //
+
+
+
+// ARGUMENTS //
+
+
+
+// GLOBAL SCOPE //
+
+
+
+// LOCAL SCOPE //
+
+
+
+// GLOBAL VS LOCAL SCOPE IN FUNCTIONS //
+
+
+
+// RETURN A VALUE FROM A FUNCTION //
+
+
+
+// UNDEFINED VALUE RETURNED //
+
+
+
+// ASSGNMENT WITH A RETURNED VALUE //
+
+
+
+// STAND IN LINE //
+
+
+
+// BOOLEAN VALUES //
+
+
+
+// IF STATEMENTS //
+
+
+
+// EQUALITY OPERATORS //
+
+
+
+// AND / OR OPERATORS //
+
+
+
+// ELSE STATEMENTS //
+
+
+
+// ELSE IF STATEMENTS //
+
+
+
+// LOGICAL ORDER IN IF ELSE STATEMENTS //
+
+
+
+// CHAINING IF ELSE STATEMENTS //
+
+
+
+// GOLF CODE //
+
+
+
+// SWITCH STATEMENTS //
+
+
+
+// RETURNING BOOLEAN VALUES FROM FUNCTIONS //
+
+
+
+// RETURN EARLY PATTERN FOR FUNCTIONS //
+
+
+
+// COUNTING CARDS //
+
+
+
+// BUILD OBJECTS //
+
+
+
+// DOT NOTATION //
+
+
+
+// BRACKET NOTATION //
+
+
+
+// VARIABLES //
+
+
+
+// UPDATING OBJECT PROPERTIES //
+
+
+
+// ADD NEW PROPERTIES TO AN OBJECT //
+
+
+
+// DELETE PROPERTIES FROM AN OBJECT //
+
+
+
+// OBJECTS FOR LOOKUPS //
+
+
+
+// TESTING OBJECTS FOR PROPERTIES //
+
+
+
+// MANIPULATING COMPLEX OBJECTS //
+
+
+
+// NESTED OBJECTS //
+
+
+
+// NESTED ARRAYS //
+
+
+
+// RECORD COLLECTION //
+
+
+
+// WHILE LOOPS //
+
+
+
+// FOR LOOPS //
+
+
+
+// ODD NUMBERS WITH A FOR LOOP //
+
+
+
+// COUNT BACKWARDS WITH A FOR LOOP //
+
+
+
+// ITERATE THROUGH AN ARRAY WITH A FOR LOOP //
+
+
+
+// NESTING FOR LOOPS //
+
+
+
+// DO...WHILE LOOPS //
+
+
+
+// PROFILE LOOKUP //
+
+
+
+// RANDOM FRACTIONS AND WHOLE NUMBERS //
+
+
+
+// parseInt FUNCTION //
+
+
+
+// TERNARY OPERATOR //
+
+
+
+// MULTIPLE TERNARY OPERATORS //
+
+
+
+// VAR VS LET //
+
+
+
+// CONST KEYWORD //
+
+
+
+// MUTATE AN ARRAY DECLARED WITH CONST //
+
+
+
+// PREVENT OBJECT MUTATION //
+
+
+
+// ARROW FUNCTIONS //
+
+
+
+// DEFUALT PARAMETERS //
+
+
+
+// REST OPERATOR //
+
+
+
+// SPREAD OPERATOR //
+
+
+
+// DESTRUCTING ASSIGNMENT //
+
+
+
+// TEMPLATE LITERALS //
+
+
+
+// SIMPLE FIELDS //
+
+
+
+// DECLARATIVE FUNCTIONS //
+
+
+
+// CLASS SYNTAX //
+
+
+
+// GETTERS AND SETTERS //
+
+
+
+// IMPORT AND EXPORT //
+
+
+
+//** CODECADEMY INTRO TO JAVASCRIPT VIDEO END **/
+
+
+
+
+//** JAVASCRIPT DOM MANIPULATION VIDEO **/
+// SELECTING ELEMENTS IN THE DOM //
+
+
+
+// STYLING AN ELEMENT //
+
+
+
+// CREATING ELEMENTS //
+
+
+
+// ADDING ELEMENTS //
+
+
+
+// MODIFY TEXT //
+
+
+
+// MODIFYING ELEMENTS ATTRIBUTES AND CLASSES //
+
+
+
+// REMOVE AN ELEMENT //
+
+
+
+// TRAVERSING THE DOM //
+
+
+
+// EVENT LISTENERS //
+
+
+
+// EVENT PROPAGATION //
+
+
+
+// EVENT DELEGATION //
+
+
+
+// PROJECTS //
+
+
+
+//** JAVASCRIPT DOM MANIPULATION VIDEO END **//
+
+
+
+
+//** ASYNCHRONUS JAVASCRIPT COURSE VIDEO START **//
+
+
+
+// INTRO //
+
+
+
+// ASYNCHRONUS JAVASCRIPT //
+
+
+
+// SYNC VS ASYNC //
+
+
+
+// SETTIMEOUT FUNCTION //
+
+
+
+// CALLBACKS //
+
+
+
+// PROMISES AND PROMISE CYCLE //
+
+
+
+// PROMISE CHAINING //
+
+
+
+// ERROR HANDLING //
+
+
+
+// FINALLY HANDLER //
+
+
+
+// ASYNCH/AWAIT //
+
+
+
+// TRY CATCH FINALLY //
+
+
+
+// ASYNCH KEYWORD //
+
+
+
+
+//** ASYNCHRONUS JAVASCRIPT COURSE VIDEO END **//
