@@ -11,7 +11,7 @@ number: a number
 object: can store key value pairs
 */
 
-var newVariable = "using var to set new variable"; // var can be used throughout your whole program
+var newVariable = "using var to set new variable";
 
 newVariable = "updating variable"; // with var you can update a variable at any point during your program
 
@@ -365,7 +365,7 @@ ourFunctionWithArgs(10, 5); // calling out the function and printing 5 to the co
 var myGlobal = 10;
 
 function fun1() {
-
+    oopsGlobal = 5;
 }
 
 function fun2() {
@@ -385,25 +385,87 @@ fun2();
 
 // LOCAL SCOPE // -- can be called out and seen within the function block
 
+function myLocalScope() {
+    myVar = 5; // since it was created in a function, it is only accessable inside of that function
+    console.log(myVar);
+}
+myLocalScope();
+
+console.log(myVar); // will print out undefined because myVar is only accessable within the scope of the function it was created in
 
 
-// GLOBAL VS LOCAL SCOPE IN FUNCTIONS //
+
+// GLOBAL VS LOCAL SCOPE IN FUNCTIONS // -- there can be local variables with the same name as global variables however the local variable will take priority over the global variable
+
+var outerWear = "T-Shirt"; // global variable
+
+function myOutfit() {
+    var outerWear = "Coat"; // local variable
+
+    return outerWear;
+}
+
+console.log(myOutfit()); // prints out "Coat"
+console.log(outerWear); // prints out "T-Shirt"
 
 
 
 // RETURN A VALUE FROM A FUNCTION //
 
+function minusSeven(num) { //here num is just a placeholder for whatever you will be passing through the function
+    return num - 7; // whatever num you pass through minus seven
+}
+
+console.log(minusSeven(10)); // this is passing the number 10 into the function
+
 
 
 // UNDEFINED VALUE RETURNED //
 
+var sum = 0;
+function addThree() {
+    sum = sum + 3; // there is no return value for the function so the return would be undefined
+}
 
+function addFive() {
+    sum += 5;
+}
 
 // ASSGNMENT WITH A RETURNED VALUE //
+
+var changed = 0; // declaring the variable "changed"
+
+function change(num) { // creating a function and adding num as a placeholder
+    return (num + 5) / 3; // telling the program to return num + 5 / 3 when the function is called out
+}
+
+changed = change(10); // pushing the number 10 through the function change and updating the varibale changed and assigning the return of function change to it
+console.log(changed); // prints out 5
+
+var processed = 0; // declaring the variable "processed"
+
+function processArg(num) { // creating function named "processArg" and using num as a placeholder
+    return (num + 3) / 5; // telling program to return the value of num + 3 / 5 when the function is called out
+}
+
+processed = processArg(10); // updating the variable processed to equal the value of function "processedArg" with the number 10 being pushed through the function
+console.log(processed); // prints 2.6
 
 
 
 // STAND IN LINE //
+
+function nextInLine(arr, item) {
+
+
+    return item;
+}
+
+var testArr = [1,2,3,4,5];
+
+console.log("Before: " + JSON.stringify(testArr)); // printing out the array before its been run through the function // JSON.stringify changes an array into a string that can easily be printed out onto the screen
+console.log(nextInLine(testArr, 6)); // passing the array through the function
+console.log("After: " + JSON.stringify(testArr)); // printing the results of passing the array through the function
 
 
 
