@@ -239,66 +239,151 @@ myStr[0] = "H"; // this selects the first (0) letter in the string and appends i
 
 var firstName = "Wyatt";
 var secondLetterofFirstName = firstName[1]; // selects the second character in the string 
+var lastLetterOfFirstName = firstName [4]; // selects the fifth letter in the string
+
+var lastName = "Murdoch";
+var firstLetterOfLastName = lastName[lastName.length - 7];
+console.log(firstLetterOfLastName);
 
 
 
 // WORD BLANKS //
 
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = ""; // this creates the variable result but we dont define it
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + "."; // this concantenation is the result of adding the result variable with the variables we called in our function
+    return result; // this is returning the result
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+
 
 
 // ARRAYS //
+
+var testArray = ["small", 23];
 
 
 
 // NEST ARRAYS //
 
+var myArray = [["Grant", 26], ["Peyton", 24], ["Trey", 29], 65, ["this", "is", "an", "array"]];
+
 
 
 // ACCESS ARRAY DATA //
 
-
+var myData = myArray[0][0]; // to access data in a multi-dimensional list you need to use brackets for each position in the array
+console.log(myData);
 
 // MODIFY ARRAY DATA //
+
+myArray[0][0] = "stupid"; // the 0,0 selects grant in the array and changes the string to "stupid"
+console.log(myArray);
+
+myArray[0][0] = "Grant"; // the 0,0 selects stupid in the array and changes the string to Grant
+console.log(myArray);
 
 
 
 // ACCESS MULTI-DIMENSIONAL ARRAYS //
 
+var theArray = [["Grant", 26], ["Peyton", 24], ["Trey", 29], 65, ["this", "is", "an", "array"]];
 
-
-// PUSH() //
-
-
-
-// POP() //
-
-
-
-// SHIFT() //
-
-
-
-// UNSHIFT() //
-
-
-
-// SHOPPING LIST //
+/* the following is the order in the list
+grant = 0,0
+26 = 0,1
+peyton = 1,0
+24 = 1,1
+trey = 2,0
+29 = 2,1
+65 = 3
+this = 4,0
+is = 4,1
+an = 4,2
+array = 4,3
+*/
 
 
 
-// WRITE REUSABLE WITH FUNCTIONS //
+// PUSH() // -- pushes to the end of the array
+
+var newArray = ["Stimpson", "J", "Cat"];
+newArray.push("Happy", "joy");
+
+console.log(newArray);
+
+
+
+// POP() // -- removes the last object in the array
+
+var anArray = [1,2,3,4,5,6,7];
+var removedFromAnArray = anArray.pop(); // creating a variable to store the removed object from the array
+console.log(anArray); /* prints 1,2,3,4,5,6 */
+console.log(removedFromAnArray); /* prints 7 */
+
+
+
+// SHIFT() // -- removes the first element of the array
+
+var newArray = ["Stimpson", "J", "Cat"];
+var removedFromNewArray = newArray.shift(); // declaring variable and setting it equal to newArray.shift() this is removing the first element
+console.log(newArray); // prints 'J', 'Cat'
+console.log(removedFromNewArray); // prints Stimpson
+
+
+
+// UNSHIFT() // -- adds an element to the beginning of the array
+
+var hoorayArray = ["I'm ", "tired", " of ", "coding."];
+hoorayArray.shift(); // prints tired of coding.
+hoorayArray.unshift("You're"); // prints You're tired of coding.
+
+
+
+// WRITE REUSABLE WITH FUNCTIONS // -- allow us to create reusable code in javascript
+
+function ourReusableFunction() { // creating a function called ourReusableFuction
+    console.log("Hola, World!"); // telling the function to print Hola World to the console every time it is called within the program
+}
+
+ourReusableFunction(); // calling the function out, it will now print in the console
 
 
 
 // ARGUMENTS //
 
+function ourFunctionWithArgs(a, b) { // creating a function called ourFunctionWithArgs and assigning two placeholders to it a and b
+    console.log(a - b); // telling the function to print a - b to the console
+}
+ourFunctionWithArgs(10, 5); // calling out the function and printing 5 to the console
 
 
-// GLOBAL SCOPE //
+
+// GLOBAL SCOPE // -- can be seen throughout the whole program. variables that can be seen outside of your function block
+
+var myGlobal = 10;
+
+function fun1() {
+
+}
+
+function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined") {
+        output += "myGlobal: " + myGlobal;
+    }
+    if (typeof oopsGlobal != "undefined") {
+        output += " oopsGlobal: " + oopsGlobal;
+    }
+    console.log(output);
+}
+fun1();
+fun2();
 
 
 
-// LOCAL SCOPE //
+// LOCAL SCOPE // -- can be called out and seen within the function block
 
 
 
