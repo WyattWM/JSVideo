@@ -455,54 +455,274 @@ console.log(processed); // prints 2.6
 
 // STAND IN LINE //
 
-function nextInLine(arr, item) {
+function nextInLine(arr, item) { // function nextInLine is created and has two place holders
 
-
-    return item;
+    arr.push(item); // this is taking an array and "pushing" the new item to the end of the array
+    return arr.shift(); // this will return whatever the first element in the array is 
 }
 
 var testArr = [1,2,3,4,5];
 
 console.log("Before: " + JSON.stringify(testArr)); // printing out the array before its been run through the function // JSON.stringify changes an array into a string that can easily be printed out onto the screen
-console.log(nextInLine(testArr, 6)); // passing the array through the function
+console.log(nextInLine(testArr, 6)); // passing the array through the function and passing the number 6 through as well
 console.log("After: " + JSON.stringify(testArr)); // printing the results of passing the array through the function
 
 
 
-// BOOLEAN VALUES //
+// BOOLEAN VALUES // -- true or false // true is on and false is off // no quotation marks // 
+
+function welcomeToBooleans() {
+    return false;
+}
 
 
 
-// IF STATEMENTS //
+// IF STATEMENTS // -- if checks to see if inside a function IF certain conditions are met then the program is to run the code ELSE...
+
+var yourMom = 69;
+
+function ourTrueOrFalse(isItTrue) {
+    if (isItTrue) { // this is looking to see if any condition is true then it will run what is in the curly braces // always parenthesis after the keyword IF
+        return "Yes, it's true"; // then printing the message
+    }
+    return "No, it's false"; // otherwise its printing this message
+}
+
+function numbersAndStuff(num) {
+    if (num == 7) { // checking to see if num = 7 
+       return "your mom"; // if so then its printing "your mom" 
+    }
+    return "your mom's mom";
+}
+
+console.log(ourTrueOrFalse()); // if put any condition inside the parathesis that is true then you will get a return of "yes, it's true"
+var theAnswer = numbersAndStuff(7); // we are passing the number 7 through the function "numbersAndStuff" and the function is saying that yup 7 = 7 so it is printing out "your mom"! // also this is assigning the value of "numbersAndStuff(7)" to the variable "theAnswer"
+console.log(theAnswer);
 
 
 
-// EQUALITY OPERATORS //
+// EQUALITY OPERATORS // -- if you arent declaring something when using the = sign and you are wanting to check and see if its equal to something then you need to use the == operator
+
+function testEqual(val) {
+    if (val == 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+testEqual(10);
+console.log(testEqual(10));
+
+
+// STRICT EQUALITY OPERATOR //
+
+// 3 === 3 would equal true and 3 === '3' would equal false
+// the triple equality operator is known as the strict eqaulity operator. strict equality operator does not do the type conversion
+
+function testStrict(val) {
+    if (val === 7) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+
+testStrict(10);
+
+
+function testStrictNotEqual(val) {
+
+    if (val !== 17) { // !== okay so this guy will check if something is not equal to a value AND it will not check different data types.
+
+        return "Not Equal";
+    }
+    return "Equal";
+}
+
+console.log(testStrictNotEqual(10)); // will print "Not Equal"
+
+
+// INEQUALITY OPERATOR //
+
+function testNotEqual(val) {
+    if (val != 99) { // != is the operator for 'does not equal' this is checking if the val does not equal 99. so anything other than 99 will print out not equal.
+        return "Not Equal";
+    }
+    return "Equal";
+}
+
+console.log(testNotEqual(10)); // will print 'Not Equal'
+
+
+
+//  LOGICAL AND OPERATOR //
+
+function testGreaterThan(val) {
+    if (val >= 100) {
+        return "Over 100";
+    }
+
+    if (val >= 10) {
+        return "Over 10";
+    }
+
+    return "10 or Under";
+}
+
+console.log(testGreaterThan(10)); 
 
 
 
 // AND / OR OPERATORS //
 
+function testLogicalAnd(val) {
+/*
+    if (val <= 50) { // checking to see if its less than or equal to 50
+        if (val >= 25) { // checking to see if its more than or equal to 25
+            return "Yes"; // if so, return 'Yes'
+        }
+    }
+*/
+
+    if (val <= 50 && val >= 25) { // introducing the && operator // this is checking to see if the val is less than or equal to 50 AND if val is greater than or equal to 25
+        return "Yes"; // if so, return 'Yes'
+    }
+
+
+    return "No"; // if not, return 'No'
+}
+
+testLogicalAnd(10); // prints 'No'
+
+
+
+function testLogicalOr(val) {
+/*
+    if (val < 10) { // checking to see if val is less than 10 then return 'outside'
+        return "Outside";
+    }
+
+    if (val > 20) { // checking to see if val is greater than 20 then return 'outside'
+        return "Outside";
+    }
+*/
+
+    if (val < 10 || val > 20 ) { // welcoming to the stage... the OR Operator||| // this is checking to see if val is less than 10 OR val is greater than 20 then print 'outside'
+        return "Outside";
+    }
+
+    /*if (val > 20) { 
+        return "Outside";
+    }*/
+
+    return "Inside";
+}
+
+testLogicalOr(15);
 
 
 // ELSE STATEMENTS //
+
+function testElse(val) {
+    var result = "";
+
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else { // if the value is less than 5 then result = 'bigger than 5' ELSE result '5 or smaller'
+        result = "5 or Smaller";
+    }
+/*
+    if (val <= 5) {
+        result = "5 or Smaller";
+    }
+*/
+    return result;
+}
 
 
 
 // ELSE IF STATEMENTS //
 
+function testElseIf(val) {
+    if (val > 10) {
+        return "Greater then 10";
+    } else if (val < 5) {
+        return "Smaller than 5";
+    } else return "between 5 and 10";
+}
+
+testElseIf(7);
+
 
 
 // LOGICAL ORDER IN IF ELSE STATEMENTS //
+/*
+function orderMyLogic(val) { // there is a logical order to if else statements, in this one they are out of order so the function wont print out the less than 5 return
+    if (val < 10) {
+        return "Less than 10";
+    } else if (val < 5) {
+        return "Less than 5";
+    } else {
+        return "Greater than or equal to 10";
+    }
+}
+*/
+
+function orderMyLogic(val) { // this would print correctly because it is checking the value in the order it should be checked. PEMDAS vibes
+    if (val < 5) {
+        return "Less than 5";
+    } else if (val < 10) {
+        return "Less than 10";
+    } else {
+        return "Greater than or equal to 10";
+    }
+}
+
+console.log(orderMyLogic(7));
 
 
 
 // CHAINING IF ELSE STATEMENTS //
 
+function chainedStatements(num) {
+    if (num < 5) {
+        return "Tiny";
+    } else if (num < 10) {
+        return "Small";
+    } else if (num < 15) {
+        return "Medium";
+    } else if (num < 20) {
+        return "Large";
+    } else {
+        return "Huge"
+    }
+}
+
+console.log(chainedStatements(26)); // prints 'huge'
+
 
 
 // GOLF CODE //
 
+var names = ["hole-in-one!", "eagle", "birdie", "par", "bogey", "double bogey", "go home!"];
+function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0]
+    } else if (strokes <= par - 2) {
+        return names[1]
+    } else if (strokes == par - 1) {
+        return names[2]
+    } else if (strokes == par) {
+        return names[3]
+    } else if (strokes == par + 1) {
+        return names[4] 
+    } else if (strokes == par + 2) {
+        return names[5]
+    } else if (strokes >= par + 3) {
+        return names[6]
+    }
+}
+
+golfScore(5, 4);
 
 
 // SWITCH STATEMENTS //
