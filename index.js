@@ -727,141 +727,681 @@ golfScore(5, 4);
 
 // SWITCH STATEMENTS //
 
+function caseInSwitch(val) {
+    var answer = "";
+    switch(val) {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2: 
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+        default: // defualt is similar to else
+            answer = "stuff";
+            break;
+    }
+
+    return answer;
+}
+
+console.log(caseInSwitch(1));
+
+function sequentialSizes(val) {
+    var answer = "";
+    switch(val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Medium"
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High"
+            break;
+    }
+}
+
+/*
+function chainToSwitch(val) { // you can switch a chain of else if statements to a switch statement like below. // this may make it faster to type out and easier to understand.
+    var answer = "";
+    if (val === "Bob") {
+        answer = "Marley";
+    } else if (val === 42) {
+        answer = "The Answer";
+    } else if (val === 1) {
+        answer = "There is no #1";
+    } else if (val === 99) {
+        answer = "Missed me by this much!";
+    } else if (val === 7) {
+        answer = "Ate Nine";
+    }
+    return answer;
+}
+*/
+
+function chainToSwitch(val) {
+    var answer = "";
+    switch(val) {
+        case "bob":
+            answer = "Marley";
+            break;
+        case 42:
+            answer = "The Answer";
+            break;
+        case 1:
+            answer = "There is no #1";
+            break;
+        case 99:
+            answer = "Missed me by this much!";
+            break;
+        case 7:
+            answer = "Ate Nine";
+            break;
+    }
+    return answer;
+}
 
 
 // RETURNING BOOLEAN VALUES FROM FUNCTIONS //
+/*
+function isLess(a,b) { // you can shorten this function by just using the return statement like below
+    if (a < b) {
+        return true;
+    } else {
+        return false;
+    }
+}
+*/
+
+function isLess(a, b) {
+    return a < b;
+}
+
+console.log(isLess(10, 15));
 
 
 
 // RETURN EARLY PATTERN FOR FUNCTIONS //
 
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined; // you can escape a function at any time just by using the return statement
+    }
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
 
 
-// COUNTING CARDS //
+// BUILD OBJECTS // -- similar to arrays use properties instead of indexes
+
+var ourDog = {
+    "name": "Camper", // name is a property everything before the colon // the values are everything after the colon 
+    "legs": 4, // the values can be any data type in JS
+    "trails": 1,
+    "friends": ["everything!"]
+}
+
+var myDog = {
+    "name": "Quincy",
+    "legs": 3,
+    "tails": 2,
+    "friends": ""
+};
+
+
+// ACCESSING OBJECT PROPERTIES WITH DOT NOTATION //
+
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+var hatValue = testObj.hat; // creating a new var and assigning it the value of the property "hat"
+var shirtValue = testObj.shirt; // doing the same but with "shirt"
 
 
 
-// BUILD OBJECTS //
+// ACCESSING OBJECT PROPERTIES WITH BRACKET NOTATION // -- if your property has a space in it then you must use bracket notation
 
+var testObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
 
-
-// DOT NOTATION //
-
-
-
-// BRACKET NOTATION //
+var entreeValue = testObj["an entree"]; // you use the name of the property inside of the object // this var has been assigned 'hamburger'
+var drinkValue = testObj["the drink"];
 
 
 
 // VARIABLES //
 
+var testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+
+var playerNumber = 16; // playerNumber is set equal to "Montana"
+var player = testObj[playerNumber]; // player is set to "Montana as well
+
 
 
 // UPDATING OBJECT PROPERTIES //
 
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"],
+    12: 23
+};
+
+ourDog.name = "Happy Camper";
+ourDog[12] = 43;
+
+console.log(ourDog[12]);
 
 
 // ADD NEW PROPERTIES TO AN OBJECT //
-
-
-
 // DELETE PROPERTIES FROM AN OBJECT //
+
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"],
+    12: true
+};
+
+ourDog.bark = "bow-wow"; // you use the same concept of dot notation to add a new property to an object // this will create a new property inside of the ourDog object 
+delete ourDog.name; // this deletes something from an object
+delete ourDog[12]; // this deletes a number from the object
+
+var myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.dead = true;
+console.log(myDog["dead"]);
 
 
 
 // OBJECTS FOR LOOKUPS //
 
+function phoneticLookup(val) {
+    var result = ""
+
+    var lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "easy",
+        "foxtrot": "frank"
+
+    };
+    result = lookup[val];
+    return result;
+/*
+    switch(val) {
+        case "alpha":
+            result = "Adams";
+            break;
+        case "bravo":
+            result: "Boston";
+            break;
+        case "charlie":
+            result = "Chicago";
+            break;
+        case "delta":
+            result = "Denver";
+            break;
+        case "echo":
+            result = "Easy";
+            break;
+        case "foxtrot":
+            result = "frank";
+    }*/
+}
+
+console.log(phoneticLookup("charlie"));
+
 
 
 // TESTING OBJECTS FOR PROPERTIES //
+
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+
+    return "Change Me!";
+}
+
+console.log(checkObj("gift"));
 
 
 
 // MANIPULATING COMPLEX OBJECTS //
 
+var myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    }
+];
+
 
 
 // NESTED OBJECTS //
+
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+
+var gloveBoxContents = undefined;
+
+console.log(gloveBoxContents);
 
 
 
 // NESTED ARRAYS //
 
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip", 
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
 
-
-// RECORD COLLECTION //
+var secondTree = "";
 
 
 
 // WHILE LOOPS //
 
+var myArray = [];
+
+var i = 0;
+while (i < 5) {
+    myArray.push(i);
+    i++;
+}
+
+console.log(myArray);
+
 
 
 // FOR LOOPS //
+
+var ourArray = [];
+
+for (var i = 0; i < 5; i ++) {
+    ourArray.push(i);
+}
+
+var myArray = [];
+
+for (var i = 1; i < 6; i++) {
+    myArray.push(i);
+}
+
+console.log(myArray);
 
 
 
 // ODD NUMBERS WITH A FOR LOOP //
 
+var ourArray = [];
+
+for (var i = 0; i < 10; i += 2) {
+    ourArray.push(i);
+}
+
+console.log(ourArray);
+
+var myArray = [];
+
+for (var i = 1; i < 10;; i += 2) {
+    myArray.push(i);
+}
+
+console.log(myArray);
+
 
 
 // COUNT BACKWARDS WITH A FOR LOOP //
+
+var ourArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+    ourArray.push(i);
+}
+
+console.log(ourArray);
+
+var myArray = [];
+
+for ( var i = 9; i > 0; i -= 2) {
+    myArray.push(i);
+}
+
+console.log(myArray);
 
 
 
 // ITERATE THROUGH AN ARRAY WITH A FOR LOOP //
 
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i ++) {
+    ourTotal += ourArr[i];
+}
+
+console.log(ourTotal);
+
+var myArr = [ 2, 3, 4, 5, 6];
+var total = 0;
+
+for (var i = 0; i < myArr.length; i++) {
+    total += myArr[i];
+}
+
+console.log(total);
+
 
 
 // NESTING FOR LOOPS //
+
+function multiplyAll(arr) {
+    var product = 1;
+    for (var i=0; i < arr.length; i++) {
+        for (var j=0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+console.log(product);
 
 
 
 // DO...WHILE LOOPS //
 
+var myArray = [];
+var i = 10;
 
+while (i < 5) {
+    myArray.push(i);
+    i++;
+}
 
-// PROFILE LOOKUP //
+console.log(i, myArray);
 
 
 
 // RANDOM FRACTIONS AND WHOLE NUMBERS //
 
+function randomFraction() {
+
+    return Math.random();
+}
+
+console.log(randomFraction());
+
+
+
+// GENERATE RANDOM WHOLE NUMBERS //
+
+var randomNumberBetween0and19 = Math.floor(Math.Random() * 20);
+
+function randomWholeNum() {
+
+    return Math.random();
+}
+
+console.log(randomWholeNum());
+
+
+
+// GENERATE RANDOM WHOLE NUMBERS WITHIN A RANGE //
+
+function ourRandomRange(ourMin, ourMax) {
+
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+ourRandomRange(1, 9);
+
+function randomRange(myMin, myMax) {
+
+    return 0;
+
+}
+
+var myRandom = randomRange(5, 15);
+
+console.log(myRandom);
+
 
 
 // parseInt FUNCTION //
 
+function convertToInteger(str) {
+
+}
+
+convertToInteger("56");
 
 
 // TERNARY OPERATOR //
+
+function checkEqual(a, b) {
+    if(a === b) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+checkEqual(1, 2);
 
 
 
 // MULTIPLE TERNARY OPERATORS //
 
+function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+
+checkSign(10);
+
 
 
 // VAR VS LET //
 
+var catName = "Quincy";
+var quote;
+
+var catName = "Beau";
+
+function catTalk() {
+    "use strict";
+
+    catName = "Oliver";
+    quote = catName + " says Meow!";
+
+}
+catTalk();
+
+
+
+// COMPARE SCOPES OF THE VAR AND LET KEYWORDS //
+
+function checkScope() {
+    "use strict";
+    var i = "function scope";
+    if (true) {
+        i = "block scope";
+        console.log("Block scope i is: ", i);
+    }
+    console.log("Function scope i is: ", i);
+    return i;
+}
+
+checkScope();
 
 
 // CONST KEYWORD //
+
+function printManyTimes(str) {
+    "use strict";
+
+    var sentence = str + "is cool!";
+
+    sentence = str + " is amazing!"
+
+    for(var i = 0; i < str.length; i+=2) {
+        console.log(sentence);
+    }
+
+}
+printManyTimes("freeCodeCamp");
 
 
 
 // MUTATE AN ARRAY DECLARED WITH CONST //
 
+const s = [5, 7, 2];
+function editInPlace() {
+    "use strict";
+
+    s[0] = 2;
+    s[1] = 5;
+    s[2] = 7;
+
+}
+
+editInPlace();
+
+console.log(s);
+
 
 
 // PREVENT OBJECT MUTATION //
+
+function freezeObj() {
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI: 3.14
+    };
+
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch( ex ) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+
+console.log(PI);
 
 
 
 // ARROW FUNCTIONS //
 
+var magic = function() {
+    return new Date();
+};
+
+// WRITE ARROW FUNCTIONS WITH PARAMETERS //
+
+var myConcat = function(arr1, arr2) {
+    return arr1.concat(arr2);
+};
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+
+
+// WRITE HIGHER ORDER ARROW FUNCTIONS //
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+const squareList = (arr) => {
+    const squaredIntegers = arr;
+    return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
 
 
 // DEFUALT PARAMETERS //
+
+const increment = (function() {
+    return function increment(number, value) {
+        return number + value;
+    };
+})();
+console.log(increment(5, 2));
+console.log(increment(5));
 
 
 
